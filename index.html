@@ -1,1 +1,65 @@
-Congrats! I'm surprised you found this place but like... you shouldn't be here to know my secerets. So I hid my knowledge with a 5 digit code and uhhh no good luck!
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Final Offering</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 20px;
+            width: 120px;
+            text-align: center;
+            background: black;
+            border: 2px solid red;
+            color: red;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: red;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        #error {
+            margin-top: 10px;
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Enter the Offering</h1>
+
+    <input type="text" id="passcode" maxlength="5" placeholder="00000">
+
+    <br>
+
+    <button onclick="checkCode()">Enter</button>
+
+    <p id="error"></p>
+
+    <script>
+        function checkCode() {
+            let code = document.getElementById("passcode").value;
+
+            if (code === "49612") {
+                window.location.href = "page1.html"; 
+            } else {
+                document.getElementById("error").innerText = "It sees your mistake";
+            }
+        }
+    </script>
+
+</body>
+</html>
